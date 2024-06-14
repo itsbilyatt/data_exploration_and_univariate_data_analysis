@@ -86,7 +86,7 @@ class AutoDataAnalytics:
             st.session_state["b4"] = not st.session_state["b4"]
         if st.session_state["b4"]:
             st.header("\nColumn Names:")
-            st.write(f"**{str(df.columns).replace("], dtype=\'object\')","").replace("Index([",'')}**")
+            st.write(f"**{str(df.columns)**")
             st.header(" ", divider="rainbow")
 
         
