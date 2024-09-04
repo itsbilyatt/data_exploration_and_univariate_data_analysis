@@ -1,4 +1,8 @@
 # AutoDataAnalytics
+https://dataexplorationandunivariatedataanalysis.streamlit.app/
+
+
+
 AutoDataAnalytics is a Streamlit-based application designed for easy data exploration and univariate data analysis. This tool provides a user-friendly interface for uploading datasets and performing various analyses with just a few clicks.
 
 # Features
