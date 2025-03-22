@@ -354,7 +354,12 @@ try:
     if file :
         
         if re.search(r'.csv',str(file)):
-            df = pd.read_csv(file)
+            try:
+                df = pd.read_csv(file)
+            else:
+                df = pd.read_csv("Parts.csv", delimiter=";")
+            except exception as e:
+                print("Facing unnown issue while reading csv file")
         if re.search(r'.xlsx',str(file)):
             df = pd.read_excel(file)
 
