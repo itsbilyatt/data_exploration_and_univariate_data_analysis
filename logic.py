@@ -356,13 +356,13 @@ try:
         if re.search(r'.csv',str(file)):
             try:
                 # Attempt to read the file normally
-                df = pd.read_csv(file)
+                df = pd.read_csv("Parts.csv", delimiter=";")
             except UnicodeDecodeError as e:
                 # Handle UnicodeDecodeError (skip or log it)
                 print(f"Error reading {file}: {e}")
             try:
                 # Attempt to read the "Parts.csv" file if the first read fails
-                df = pd.read_csv("Parts.csv", delimiter=";")
+                df = pd.read_csv(file)
                 print("Successfully read Parts.csv with ';' delimiter.")
             except Exception as inner_e:
                 # Handle any other error that might occur in reading "Parts.csv"
