@@ -356,7 +356,7 @@ try:
         if re.search(r'.csv',str(file)):
             try:
                 df = pd.read_csv(file)
-            else:
+            except:
                 df = pd.read_csv("Parts.csv", delimiter=";")
             except exception as e:
                 print("Facing unnown issue while reading csv file")
