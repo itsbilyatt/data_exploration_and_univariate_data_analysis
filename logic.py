@@ -356,7 +356,9 @@ try:
         if re.search(r'.csv',str(file)):
             try:
                 df = pd.read_csv(file)
-            except Exception as e:
+            except UnicodeDecodeError as e:
+                pass
+            else:
                 df = pd.read_csv("Parts.csv", delimiter=";")
         if re.search(r'.xlsx',str(file)):
             df = pd.read_excel(file)
