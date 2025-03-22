@@ -356,10 +356,8 @@ try:
         if re.search(r'.csv',str(file)):
             try:
                 df = pd.read_csv(file)
-            except:
+            except exceptin as e:
                 df = pd.read_csv("Parts.csv", delimiter=";")
-            except exception as e:
-                print("Facing unnown issue while reading csv file")
         if re.search(r'.xlsx',str(file)):
             df = pd.read_excel(file)
 
