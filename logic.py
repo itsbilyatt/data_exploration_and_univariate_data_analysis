@@ -361,10 +361,10 @@ try:
             except UnicodeDecodeError as e:
                 # Handle UnicodeDecodeError (skip or log it)
                 print(f"Error reading {file}: {e}")
-            else:
-                # Attempt to read the "Parts.csv" file if the first read fails
-                df = pd.read_csv(file)
-                print("Successfully read Parts.csv with ';' delimiter.")
+            # else:
+            #     # Attempt to read the "Parts.csv" file if the first read fails
+            #     df = pd.read_csv(file)
+            #     print("Successfully read Parts.csv with ';' delimiter.")
             # except Exception as inner_e:
             #     # Handle any other error that might occur in reading "Parts.csv"
             #     print(f"Error reading Parts.csv: {inner_e}")
