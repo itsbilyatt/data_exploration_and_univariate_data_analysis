@@ -356,7 +356,7 @@ try:
         if re.search(r'.csv',str(file)):
             try:
                 df = pd.read_csv(file)
-            except exception as e:
+            except Exception as e:
                 df = pd.read_csv("Parts.csv", delimiter=";")
         if re.search(r'.xlsx',str(file)):
             df = pd.read_excel(file)
